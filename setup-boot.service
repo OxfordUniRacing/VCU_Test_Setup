@@ -1,0 +1,10 @@
+[Unit]
+Description=Run /home/debian/setup/boot.sh
+After=generic-board-startup.service
+
+[Service]
+Type=simple
+ExecStart=/home/debian/setup/boot.sh
+
+[Install]
+WantedBy=multi-user.target
