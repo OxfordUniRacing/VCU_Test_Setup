@@ -1,10 +1,15 @@
 #!/bin/sh
 
+
 # vcu reset pin
 config-pin p9.30 gpio
 echo out > /sys/class/gpio/gpio112/direction
 echo 1 > /sys/class/gpio/gpio112/value
 
+# vcu can0
+ip link set can0 down # this brings the device offline so we can setup it again
+config-pin p9.19 can
+config-pin p9.20 can
 ip link set can0 up type can bitrate 1000000
 
 # vcu uart3
