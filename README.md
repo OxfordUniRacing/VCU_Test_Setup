@@ -20,7 +20,7 @@ If you are on **Windows**, follow this [tutorial](https://www.digikey.co.uk/en/m
 
 ---
 
-If you are on **Linux**, run these commands on **your computer** (not the BeagleBone) and replace `BEAGLEBONE_INTERFACE` and `INTERFACE_WITH_WORKING_INTERNET` with the correct values:
+If you are on **Ubuntu Linux**, run these commands on **your computer** (not the BeagleBone) and replace `BEAGLEBONE_INTERFACE` and `INTERFACE_WITH_WORKING_INTERNET` with the correct values:
 
 ```
 sudo ifconfig BEAGLEBONE_INTERFACE 192.168.7.1
@@ -35,6 +35,8 @@ Then run these commands on the **BeagleBone**:
 sudo /sbin/route add default gw 192.168.7.1
 echo "nameserver 8.8.8.8" | sudo tee -a /etc/resolv.conf
 ```
+
+If you are on **Arch Linux**, follow this [tutorial](https://gmpreussner.com/reference/archlinux-sharing-with-beaglebone-black).
 
 ---
 
